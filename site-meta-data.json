@@ -1,9 +1,9 @@
 {
-  "title": "Delog",
-  "siteUrl": "https://delog-w3layouts.netlify.com/",
-  "description": "Delog, a GatsbyJS and Netlify CMS starter for Designers and Developers",
+  "title": "Weedle | NoCode Tools for complex e-commerce apps that scale",
+  "siteUrl": "https://blog.joinweedle.com/",
+  "description": "Weelde provides e-commerce a set of tools that can be used with your favourite NoCode builders. E-commerce tools to build small-enterprise scale stores on Webflow, Wix, Squarespace and others.",
   "home": {
-    "title": "Hi! I'm Delog",
-    "description": "I have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)"
+    "title": "Welcome to the Weedle Blog",
+    "description": "Weelde provides e-commerce a set of tools that can be used with your favourite NoCode builders. E-commerce tools to build small to enterprise scale stores on Webflow, Wix, Squarespace and others. Think Woo-Commerce but for mordern NoCode builders."
   }
 }
