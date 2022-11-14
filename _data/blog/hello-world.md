@@ -75,7 +75,7 @@ Getting the data from this page could have been easier if the data is loaded alo
 
 ```javascript
 function setCookie (data) {
-  Cookies.set('wdl-user', JSON.stringify(data))
+  Cookies.set('wf-user', JSON.stringify(data))
   if (isFromLoginPage){
       window.location.href = window.location.href;
   }
@@ -106,3 +106,58 @@ getInputOnChange(nameInput, function (newVal) {
 This next block of code is how we get the value for email and name using the function we wrote earlier. Here after getting one of the values we check if the other has been set, if it has been set we then proceed to add the information to a cookie. 
 
 Why are we using a cookie you might ask. The cookie will help us persist the information permanently such that when the user closes the browser and comes back the data will still be available.
+
+
+
+## The Complete Code
+
+```javascript
+<script>
+  (() => {
+   	$(document).ready(function () {
+      const { get, set } = Object.getOwnPropertyDescriptor(
+        HTMLInputElement.prototype, 'value'
+      );
+      
+      function getInputOnChange (inp, callback) {
+        Object.defineProperty(inp, 'value', {
+          get() {
+            return get.call(this);
+          },
+          set(newVal) {
+            callback(newVal)
+            return set.call(this, newVal);
+          }
+        });
+      }
+      
+      function setCookie (data) {
+      	Cookies.set('wf-user', JSON.stringify(data))
+        if (isFromLoginPage){
+        	window.location.href = window.location.href;
+        }
+      }
+	
+      let em = ''
+      let nm = ''
+      const emailInput = document.getElementById('wf-user-account-email');
+      const nameInput = document.getElementById('wf-user-account-name');
+      
+      getInputOnChange(emailInput, function (newVal) {
+      	em = newVal;
+        if (nm && newVal) {
+          setCookie({name: nm, email: newVal})
+        }
+      });
+      
+      
+      getInputOnChange(nameInput, function (newVal) {
+	      nm = newVal;
+        if (em && newVal) {
+          setCookie({name: newVal, email: em})
+        }
+      });
+    });
+  })();
+</script>
+```
