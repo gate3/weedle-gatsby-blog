@@ -88,14 +88,14 @@ const nameInput = document.getElementById('wf-user-account-name');
 let nm = ''
 let em = ''
 
-getInputOnChange(emailInpt, function (newVal) {
+getInputOnChange(emailInput, function (newVal) {
   em = newVal;
   if (nm && newVal) {
       setCookie({name: nm, email: newVal})
   }
 });
 
-getInputOnChange(nmInpt, function (newVal) {
+getInputOnChange(nameInput, function (newVal) {
   nm = newVal;
   if (em && newVal) {
     setCookie({name: newVal, email: em})
@@ -103,4 +103,6 @@ getInputOnChange(nmInpt, function (newVal) {
 });
 ```
 
-This next block of code is how we get the value for email and name using
+This next block of code is how we get the value for email and name using the function we wrote earlier. Here after getting one of the values we check if the other has been set, if it has been set we then proceed to add the information to a cookie. 
+
+Why are we using a cookie you might ask. The cookie will help us persist the information permanently such that when the user closes the browser and comes back the data will still be available.
