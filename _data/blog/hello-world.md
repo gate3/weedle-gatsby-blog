@@ -6,11 +6,9 @@ title: 'Get Current User In Webflow Memberships '
 metaDescription: This article looks at how to get the current user on Webflow Memberships Beta
 thumbnail: /assets/webflow-memberships.jpeg
 ---
-Webflow released one of the most anticipated features in Beta, but the release has been met with missed emotions. While the memberships feature has all the makings of a being really good, it almost totally unusable. 
+Webflow released one of the most anticipated features in Beta, but the release has been met with mixed emotions. While the memberships feature has all the makings of a being really good, it almost totally unusable. 
 
 In this tutorial, I will explore one of the most requested features of memberships, which is how do we identify the currently logged in user. We will be doing this using custom javascript code
-
-
 
 ## Prerequisites
 
@@ -106,8 +104,6 @@ getInputOnChange(nameInput, function (newVal) {
 This next block of code is how we get the value for email and name using the function we wrote earlier. Here after getting one of the values we check if the other has been set, if it has been set we then proceed to add the information to a cookie. 
 
 Why are we using a cookie you might ask. The cookie will help us persist the information permanently such that when the user closes the browser and comes back the data will still be available.
-
-
 
 ## The Complete Code
 
