@@ -1,4 +1,4 @@
-$font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
 html,
 body {
@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 * {
-  margin-top: 0
+  margin-top: 0;
 }
 body.light {
   --primary-color: #381696;
@@ -34,9 +34,9 @@ body.dark {
   --featured-bg: #66578d;
   --featured-text: #fff;
   --secondary-color: #66578d;
-  --background: #0A041A;
-  --text-color: rgba(255,255,255,0.88);
-  --text-secondary-color: rgba(255,255,255,0.66);
+  --background: #0a041a;
+  --text-color: rgba(255, 255, 255, 0.88);
+  --text-secondary-color: rgba(255, 255, 255, 0.66);
   --site-header: var(--background);
   --card-bg: #181326;
   --card-bdr: #181326;
@@ -126,7 +126,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   margin: 0 20px 0 0;
-  transition: background-color .3s linear;
+  transition: background-color 0.3s linear;
   &.-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -150,7 +150,7 @@ a {
 }
 .post {
   padding: 0;
-  background:var(--background);
+  background: var(--background);
   color: var(--text-color);
   line-height: 1.5;
   > .blog-post-content {
@@ -171,7 +171,6 @@ a {
     margin-bottom: 32px;
     text-align: center;
   }
-  
 }
 .post-thumbnail {
   text-align: center;
@@ -190,8 +189,8 @@ a {
   padding: 18px;
   overflow: hidden;
   &:before {
-    content: "";
-    background: rgba(0,0,0,0.4);
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
     left: 0;
@@ -204,7 +203,7 @@ a {
     z-index: 2;
   }
   .post-meta {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0;
   }
 }
@@ -269,8 +268,8 @@ a {
     margin-bottom: 0.5rem;
     color: var(--text-secondary-color);
   }
-  input[type=text],
-  input[type=email],
+  input[type='text'],
+  input[type='email'],
   textarea {
     appearance: none;
     border: 1px solid var(--card-shadow);
@@ -298,14 +297,12 @@ a {
   }
 }
 /* Portrait and Landscape */
-@media only screen 
-and (min-width: 768px) {
-.grids {
-  grid-template-columns: 1fr 1fr;
+@media only screen and (min-width: 768px) {
+  .grids {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-}
-@media only screen 
-  and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .grids {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -315,7 +312,6 @@ and (min-width: 768px) {
     grid-gap: 64px;
   }
 }
-
 
 // theme-changer
 .theme-changer {
@@ -341,29 +337,20 @@ body.light {
   box-sizing: border-box;
   position: relative;
   display: block;
-  transform: scale(var(--ggs,1));
+  transform: scale(var(--ggs, 1));
   width: 24px;
   height: 24px;
-  background:
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat 5px -6px/2px 6px,
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat 5px 14px/2px 6px,
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat -8px 5px/6px 2px,
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat 14px 5px/6px 2px;
+  background: linear-gradient(to bottom, currentColor 4px, transparent 0) no-repeat 5px -6px/2px 6px,
+    linear-gradient(to bottom, currentColor 4px, transparent 0) no-repeat 5px 14px/2px 6px,
+    linear-gradient(to bottom, currentColor 4px, transparent 0) no-repeat -8px 5px/6px 2px,
+    linear-gradient(to bottom, currentColor 4px, transparent 0) no-repeat 14px 5px/6px 2px;
   border-radius: 100px;
   box-shadow: inset 0 0 0 2px;
-  border: 6px solid transparent
+  border: 6px solid transparent;
 }
 .gg-sun::after,
 .gg-sun::before {
-  content: "";
+  content: '';
   display: block;
   box-sizing: border-box;
   position: absolute;
@@ -372,36 +359,110 @@ body.light {
   border-right: 4px solid;
   border-left: 4px solid;
   left: -6px;
-  top: 5px
+  top: 5px;
 }
 .gg-sun::before {
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }
 .gg-sun::after {
-  transform: rotate(45deg)
+  transform: rotate(45deg);
 }
 .gg-moon,
 .gg-moon::after {
-    display: block;
-    box-sizing: border-box;
-    border-radius: 50%
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
 }
 .gg-moon {
-    overflow: hidden;
-    position: relative;
-    transform: rotate(-135deg) scale(var(--ggs,1));
-    width: 20px;
-    height: 20px;
-    border: 2px solid;
-    border-bottom-color: transparent
+  overflow: hidden;
+  position: relative;
+  transform: rotate(-135deg) scale(var(--ggs, 1));
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-bottom-color: transparent;
 }
 .gg-moon::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 18px;
-    border: 2px solid transparent;
-    box-shadow: 0 0 0 2px;
-    top: 8px;
-    left: 2px
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 18px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  top: 8px;
+  left: 2px;
 }
+
+/** LaunchNotify **/
+
+.input__wrapper {
+  background: white;
+  border: 1px solid #9984d5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 574px;
+  height: 70px;
+  display: flex;
+  padding: 0 7px 0 16px;
+  align-items: center;
+  margin-top: 10px;
+}
+.input__wrapper button {
+  background: #9984d5;
+  border-radius: 10px;
+  height: 56px;
+  width: 182px;
+  border: none;
+  font-family: 'BR Omega Semi';
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.input__wrapper input {
+  border: none;
+  width: calc(574px - 182px);
+  border-radius: 10px;
+  height: 56px;
+  background: transparent;
+  font-family: $font-family;
+}
+.input__wrapper input:focus {
+  outline: none;
+}
+
+.input__wrapper p {
+  font-size: 12px;
+  color: red;
+}
+
+.input__wrapper {
+  background-color: #fff;
+}
+
+button.input__button {
+  font-family: $font-family;
+}
+
+.input__on_page {
+  width: 100%;
+  margin: 5rem 0;
+}
+
+@media only screen and (max-width: 560px) {
+  .input__wrapper {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  .input__wrapper input {
+    height: 40px;
+    width: 100%;
+  }
+  .input__wrapper button {
+    margin-top: 16px;
+    width: 100%;
+  }
+}
+
+/** LaunchNotify End **/
